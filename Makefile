@@ -6,7 +6,7 @@
 #    By: arnovan- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/05/25 11:55:33 by arnovan-          #+#    #+#              #
-#    Updated: 2016/06/16 11:33:04 by kchetty          ###   ########.fr        #
+#    Updated: 2016/06/16 12:27:56 by kchetty          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ PATH_HD= -I includes/
 SRC = $(PATH_SRC)ft_ls.c $(PATH_SRC)errors.c $(PATH_SRC)flags.c\
 	  $(PATH_SRC)read_files.c $(PATH_SRC)flag_l.c\
 	  $(PATH_SRC)display.c
+	  
 
 OBJ = ft_ls.o errors.o flags.o read_files.o flag_l.o display.o
 

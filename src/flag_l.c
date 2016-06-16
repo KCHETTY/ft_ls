@@ -6,7 +6,7 @@
 /*   By: kchetty <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 09:50:12 by kchetty           #+#    #+#             */
-/*   Updated: 2016/06/16 11:34:00 by kchetty          ###   ########.fr       */
+/*   Updated: 2016/06/16 12:37:30 by kchetty          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,11 @@ char	*ft_getpermissions(struct stat *f_stat)
 }
 
 
-void	flag_l(t_DIR ref, t_args flags)
+void	flag_l(t_DIR ref, t_args flags, t_flag_l **first)
 {
 	time_t		*mtime;
 	ref.dir = opendir(".");
-	t_flag_l	*first = NULL;
-	t_flag_l	*node;
+	t_flag_l	*node = NULL;
 
 	if (flags.flag_a == 1)
 	{	
@@ -64,10 +63,10 @@ void	flag_l(t_DIR ref, t_args flags)
 			ref.pwd         = getpwuid(ref.buf.st_uid);
 			ref.grp         = getgrgid(ref.buf.st_gid);
 			mtime = &ref.buf.st_mtimespec.tv_sec;
-			if (first == NULL)
+			if (*first == NULL)
 			{
-				first = (t_flag_l *)malloc(sizeof(t_flag_l));	
-				node = first;
+				*first = (t_flag_l *)malloc(sizeof(t_flag_l));	
+				node = *first;
 			}
 			node->perno		= ft_getpermissions(&ref.buf);
 			node->link		= ref.buf.st_nlink;
@@ -107,6 +106,6 @@ void	flag_l(t_DIR ref, t_args flags)
 		first = first->next;
 	}
 */
-	//free(node);
+	free(node);
 }
 
