@@ -6,7 +6,7 @@
 /*   By: arnovan- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 08:56:06 by arnovan-          #+#    #+#             */
-/*   Updated: 2016/06/16 12:43:07 by kchetty          ###   ########.fr       */
+/*   Updated: 2016/06/16 12:48:31 by kchetty          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	read_files(t_args flags, t_DIR dir)
 		flag_a(dir, &first_a);
 	if (flags.flag_l == 1)
 		flag_l(dir, flags, &first_l);
-	if (flag.flag_r == 1)
+	if (flags.flag_r == 1)
 
 	ft_display(first_a, first_l);
 
