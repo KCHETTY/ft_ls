@@ -6,7 +6,7 @@
 /*   By: kchetty <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 09:03:32 by kchetty           #+#    #+#             */
-/*   Updated: 2016/06/16 12:30:33 by kchetty          ###   ########.fr       */
+/*   Updated: 2016/06/16 16:03:33 by kchetty          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,5 @@ void	flag_a(t_DIR dir, t_flag_a **first);
 void	flag_l(t_DIR dir, t_args flags, t_flag_l **first);
 void	read_files(t_args flags, t_DIR dir);
 void    ft_display(t_flag_a *first_a, t_flag_l *first_l);
-
+void    flag_r(t_flag_a **first_a, t_flag_l **first_l);
 #endif
